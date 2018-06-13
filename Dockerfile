@@ -21,7 +21,8 @@ RUN curl https://bootstrap.pypa.io/get-pip.py | python2.7
 RUN curl https://bootstrap.pypa.io/get-pip.py | python3.6
 
 COPY home/prezto_install.sh /root/prezto_install.sh
-RUN chmod +x /root/prezto_install.sh && /root/prezto_install.sh
+RUN chmod +x /root/prezto_install.sh
+RUN /root/prezto_install.sh
 RUN rm /root/prezto_install.sh
 COPY home/zpreztorc /root/.zprezto/runcoms/zpreztorc
 COPY home/.tmux.conf /root/.tmux.conf 
